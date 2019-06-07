@@ -20,6 +20,12 @@ namespace fukusyuu0531
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Text = MousePosition.X + "," + MousePosition.Y;
+            Point p = PointToClient(MousePosition);
+
+            label2.Left = p.X - label2.Width / 2;
+            label2.Top = p.Y - label2.Width / 2;
+
             label1.Left += vx;
             label1.Top += vy;
             if (label1.Left < 0) 
